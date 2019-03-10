@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row"></div>
+  <div class="col s5">
+      <div class="card">
+        <div class="card-content">
+          <form #userForm="ngForm" (ngSubmit)="addUser(userForm)">
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" name="nombre" #nombre="ngModel" 
+                [(ngModel)]="userService.selectedUser.nombre" 
+                placeholder="Ingresa tu nombre">
+              </div>
+              <div class="input-field col s12">
+                <input type="date" name="fechaNacimiento" #fechaNacimiento="ngModel" 
+                [(ngModel)]="userService.selectedUser.fechaNacimiento" 
+                placeholder="Ingresa tu fecha de nacimiento">
+              </div>
+              <div class="input-field col s12">
+                <input type="text" name="sexo" #sexo="ngModel" 
+                [(ngModel)]="userService.selectedUser.sexo" 
+                placeholder="Sexo">
+              </div>
+              <div class="input-field col s12">
+                <input type="number" name="altura" #altura="ngModel" 
+                [(ngModel)]="userService.selectedUser.altura" 
+                placeholder="Ingresa tu altura">
+              </div>
+              <div class="card-action">
+                <div class="input-field col s12">
+                  <button class="btn right" style= "margin-left: 10px;" 
+                  (click)="limpiarFormulario(userForm)">Limpiar</button>
+                  <button class="btn right"
+                  >Guardar</button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+  </div>
+  <div class="col s7">
+
+
+  </div>
+</div>
